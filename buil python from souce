@@ -1,0 +1,18 @@
+Nếu build python từ source bị lỗi thiếu module thì cần cài thêm vào hệ thống ubuntu trước khi build, khi bạn cần cài thêm version python từ source!
+
+On a fresh Debian image, cloning https://github.com/python/cpython and running:
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus
+sudo apt-get install libncursesw5-dev libgdbm-dev libc6-dev
+sudo apt-get install zlib1g-dev libsqlite3-dev tk-dev
+sudo apt-get install libssl-dev openssl
+sudo apt-get install libffi-dev
+Now execute the configure file cloned above:
+
+./configure
+make # alternatively `make -j 4` will utilize 4 threads
+sudo make altinstall
+Got 3.7 installed and working for me.
