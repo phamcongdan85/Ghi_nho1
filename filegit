@@ -1,0 +1,12 @@
+48
+
+I'll explain what I did...I tried to clone a repository from GitHub which contains GIT LFS pointers in it. I followed the following steps and got the actual files.
+
+Fork the repo to one of your users
+Go to repo settings
+Find "Include Git LFS objects in archives" under the Archives section and check it
+Go to the Danger Zone section, select "Archive this repository"
+Confirm and authorize.
+Return to the archived repository.
+Download as .zip
+Download will pause for a minute or so before it starts downloading lfs objects. Wait and it should continue.
